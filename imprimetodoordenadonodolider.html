@@ -72,7 +72,6 @@
 
 
 
-
 #idh2{
 
 font-family: "Playfair Display SC", serif;
@@ -85,6 +84,9 @@ font-family: "Playfair Display SC", serif;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+
+
+
 
 
 
@@ -159,10 +161,6 @@ top:1px;
 
 
 
-
-
-
-
 </style><script src="jquery-3.3.1.min.js"></script>
 </head>
 
@@ -175,9 +173,9 @@ top:1px;
   
   <div id="idmenulateral"></div>
 
-<h2 id="idh2">Ordena Todo por Lider</h2>
+<h2 id="idh2">Ordenado Por Lider</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por Lider" title="Type in a name">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar Por Puesto" title="Type in a name">
 
 <table id="myTable">
   <tr class="header">
@@ -212,15 +210,14 @@ top:1px;
 </table>
 <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
 <script>
-   // Initialize Firebase
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBw2Zg2S2eYOtY8t43qO2zqC3pdtIvUDtc",
-    authDomain: "robincampa-79c2d.firebaseapp.com",
-    databaseURL: "https://robincampa-79c2d.firebaseio.com",
-    projectId: "robincampa-79c2d",
-    storageBucket: "robincampa-79c2d.appspot.com",
-    messagingSenderId: "459935713692"
+    apiKey: "AIzaSyCAurJpGFpim_P2s1JMK3mU-hL1GoN76fA",
+    authDomain: "hermanorobin-9767e.firebaseapp.com",
+    databaseURL: "https://hermanorobin-9767e.firebaseio.com",
+    projectId: "hermanorobin-9767e",
+    storageBucket: "hermanorobin-9767e.appspot.com",
+    messagingSenderId: "25162325991"
   };
   firebase.initializeApp(config);
 </script>
@@ -240,7 +237,9 @@ function traetodoordenadopor(st1){
  // console.log(snapshot.val());
   //todovotantest=snapshot.val();
   arraytodoordenode.push(snapshot.val());
-  console.log("long  "+ todovotantest.des);
+ // console.log("long  "+ todovotantest.des);
+
+  console.log("long  "+  st1+   ""+ todovotantest.des);
  // elforordenatodopornodo();
 // creatd();
 todovotantest.ant=todovotantest.ahora;
@@ -377,13 +376,13 @@ var st={
 */
 var idxs=0;
 
-  varstestructuratd="<tr ><td id="+String(idx)+" class='cltd'>Nombre:<br>"+String("") +"</td><td class='cltd'>Cedula:<br>"+String("")+"</td>"+
-    " <td class='cltd'>Telefono:<br>"+String("")+"</td>"+
-   "  <td class='cltd'>Puesto:<br>"+String("")+"</td>"+
-     "<td class='cltd'>Direccion:<br>"+String("")+"</td>"+
-    " <td class='cltd'>Mesa:<br>"+String("")+"</td>"+
-    " <td class='cltd'>Referido:<br>"+String("")+"</td>"+
-    " <td class='cltd'>"+String("Telefono Lider")+"<br></td></tr>";
+varstestructuratd="<tr ><td id="+String(idx)+" class='cltd'>Nombre:<br>"+String("") +"</td><td class='cltd'>Cedula:<br>"+String("")+"</td>"+
+  " <td class='cltd'>Telefono:<br>"+String("")+"</td>"+
+ "  <td class='cltd'>Puesto:<br>"+String("")+"</td>"+
+   "<td class='cltd'>Direccion:<br>"+String("")+"</td>"+
+  " <td class='cltd'>Mesa:<br>"+String("")+"</td>"+
+  " <td class='cltd'>Referido:<br>"+String("")+"</td>"+
+  " <td class='cltd'>"+String("Telefono Lider")+"<br></td></tr>";
 
 
 
@@ -400,7 +399,7 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[6];
+    td = tr[i].getElementsByTagName("td")[3];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -473,13 +472,13 @@ $("#myTable").append(stestructuratd);
 //megusta:general[itera].likes
 
 
-stestructuratd="<tr ><td onclick="+'yocelda(this);'+"id="+String(idx)+" class='cltd'>Nombre:<br>"+String("Giovanni ernesto rodigues diaz")+" : "+String(idx)+ +"</td>"+
+stestructuratd="<tr ><td onclick="+'yocelda(this);'+"id="+String(idx)+" class='cltd'>Nombre:<br>"+String("""")+" : "+String(idx)+ +"</td>"+
 "<td class='cltd'>Cedula:<br>"+String(111111111111)+"</td>"+
   " <td class='cltd'>Telefono:<br>"+String(3134567898)+"</td>"+
  "  <td class='cltd'>Puesto:<br>"+String("casdfrewsdfgvddsdsdsdd")+"</td>"+
    "<td class='cltd'>Direccion:<br>"+String("cal le 34 No 43 b - 12")+"</td>"+
   " <td class='cltd'>Mesa:<br>"+String(32)+"</td>"+
-  " <td class='cltd'>Referido:<br>"+String("Giovanni ernesto rodigues diaz")+"</td>"+
+  " <td class='cltd'>Referido:<br>"+String("""")+"</td>"+
   " <td class='cltd'>"+String("Telefono Lider")+"<br>"+String(3123456789)+"</td></tr>";
 
 //general[itera].likes
